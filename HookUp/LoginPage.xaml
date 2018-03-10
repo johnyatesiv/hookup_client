@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HookUp"
+    x:Class="HookUp.LoginPage"
+>
+    <StackLayout BackgroundColor="{StaticResource BackgroundColor}" Padding="10,10,10,10" Margin="5">
+        <Label FontSize="50" Text="HookUp" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+        <Image Source="http://i0.kym-cdn.com/photos/images/facebook/001/310/768/69a.jpg"/>
+        <Label Text="Email" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="LoginEmailEntry" Placeholder="Email" />
+        <Label Text="Password" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="LoginPasswordField" IsPassword="true" />
+        <Button 
+            Text="Login" 
+            Clicked="OnLoginButtonClicked" 
+            HorizontalOptions="CenterAndExpand" 
+            BackgroundColor="{StaticResource SubPanelColor}"
+            WidthRequest="100"
+        />
+        <Label x:Name="LoginErrorLabel" />
+    </StackLayout>
+</ContentPage>

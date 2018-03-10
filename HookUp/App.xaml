@@ -1,6 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HookUp.App">
 	<Application.Resources>
-		<!-- Application resource dictionary -->
+		<ResourceDictionary>
+            <Color x:Key="BackgroundColor">#252A31</Color>
+            <Color x:Key="SubPanelColor">#485664</Color>
+            <Color x:Key="HighlightedPanelColor">#A3ADA3</Color>
+            <Color x:Key="UnusedColor1">#ECECD7</Color>
+            <Color x:Key="UnusedColor2">#CDA064</Color>
+            <Color x:Key="HeaderTextColor">White</Color>
+            <Color x:Key="DefaultTextColor">White</Color>
+            <Style x:Key="LabelPageHeadingStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}" />
+            </Style>
+        </ResourceDictionary>
 	</Application.Resources>
 </Application>

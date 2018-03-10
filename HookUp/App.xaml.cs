@@ -7,8 +7,7 @@ namespace HookUp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new HookUpPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
