@@ -5,20 +5,23 @@
     xmlns:local="clr-namespace:HookUp"
     x:Class="HookUp.LoginPage"
 >
-    <StackLayout BackgroundColor="{StaticResource BackgroundColor}" Padding="10,10,10,10" Margin="5">
-        <Label FontSize="50" Text="HookUp" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-        <Image Source="http://i0.kym-cdn.com/photos/images/facebook/001/310/768/69a.jpg"/>
-        <Label Text="Email" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand"/>
-        <Entry x:Name="LoginEmailEntry" Placeholder="Email" />
-        <Label Text="Password" TextColor="White" FontSize="20" HorizontalOptions="CenterAndExpand" />
-        <Entry x:Name="LoginPasswordField" IsPassword="true" />
+    <StackLayout BackgroundColor="{StaticResource BlueMain}" Padding="5,5,5,5" Margin="2">
+        <Label FontSize="80" Text="HookUp" TextColor="{StaticResource Yellow3}" HorizontalOptions="CenterAndExpand"/>
+<!--        <Image Source="http://i0.kym-cdn.com/photos/images/facebook/001/310/768/69a.jpg"/>-->
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Fish_icon.svg/2000px-Fish_icon.svg.png"/>
+        <Label Text="Email" TextColor="{StaticResource Yellow3}" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="LoginEmailField" Placeholder="Email" />
+        <Label Text="Password" TextColor="{StaticResource Yellow3}" FontSize="30" HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="LoginPasswordField" IsPassword="true" Placeholder="Password"/>
         <Button 
-            Text="Login" 
+            Text="Login"
+            FontSize="30"
+            TextColor="{StaticResource Yellow3}"
             Clicked="OnLoginButtonClicked" 
             HorizontalOptions="CenterAndExpand" 
-            BackgroundColor="{StaticResource SubPanelColor}"
+            BackgroundColor="{StaticResource Blue2}"
             WidthRequest="100"
         />
-        <Label x:Name="LoginErrorLabel" />
+        <Label x:Name="LoginErrorLabel" TextColor="{StaticResource Yellow3}"/>
     </StackLayout>
 </ContentPage>

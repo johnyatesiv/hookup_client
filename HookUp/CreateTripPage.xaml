@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HookUp.CreateTripPage">
+    <ContentPage.Content>
+        <StackLayout 
+            BackgroundColor="{StaticResource BlueMain}"
+            Padding="10,10,10,10"
+            Margin="5"
+        >
+            <Label Text="Create a Trip" FontSize="35" TextColor="{StaticResource Yellow3}" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="Boat Name" FontSize="15" TextColor="{StaticResource Yellow3}"/>
+            <Entry x:Name="Location" TextColor="{StaticResource Yellow3}"/>
+            <Label Text="Dock Location" FontSize="15" TextColor="{StaticResource Yellow3}"/>
+            <Entry x:Name="Boat" TextColor="{StaticResource Yellow3}"/>
+            <Label Text="Start Time" FontSize="15" TextColor="{StaticResource Yellow3}"/>
+            <DatePicker x:Name="Start" VerticalOptions="CenterAndExpand">
+                 <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+            </DatePicker>
+            <Label Text="End Time" FontSize="15" TextColor="{StaticResource Yellow3}"/>
+            <DatePicker x:Name="End" VerticalOptions="CenterAndExpand">
+                 <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+            </DatePicker>
+            <Button x:Name="CreateTripButton"
+                    TextColor="{StaticResource Yellow3}"
+                    Clicked="OnCreateTripButtonClicked"
+            ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

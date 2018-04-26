@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="HookUp.TripPage"
+>
+    <ContentPage.Content>
+        <StackLayout 
+            BackgroundColor="{StaticResource BlueMain}"
+            Padding="10,10,10,10"
+            Margin="5"
+        >
+            <Label 
+                x:Name="TripBoat"
+                TextColor="{StaticResource Yellow3}"
+                HorizontalOptions="Center"
+                FontSize="40"
+            ></Label>
+            <Label 
+                x:Name="TripLocation"
+                TextColor="{StaticResource Yellow3}"
+                HorizontalOptions="Center"
+                FontSize="25"
+            ></Label>
+            <Image Source="http://www.bookpunks.com/wp-content/uploads/2015/08/Sailing-If-I-Had-a-Boat.jpg"/>
+            <Label 
+                x:Name="TripStart"
+                TextColor="{StaticResource Yellow3}"
+                HorizontalOptions="Center"
+                FontSize="20"
+            ></Label>
+            <Label 
+                x:Name="TripEnd"
+                TextColor="{StaticResource Yellow3}"
+                HorizontalOptions="Center"
+                FontSize="20"
+            ></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

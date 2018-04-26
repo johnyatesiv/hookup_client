@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HookUp.IndexPage">
 	<ContentPage.Content>
-        <StackLayout BackgroundColor="{StaticResource BackgroundColor}" Padding="10,10,10,10" Margin="5">
-            <Label Text="Hello!"/>
+        <StackLayout 
+            BackgroundColor="{StaticResource BlueMain}"
+            Padding="10,10,10,10"
+            Margin="5"
+        >
+            <Label x:Name="WeatherForecastView"></Label>
+            <ListView x:Name="TripListView" ItemsSource="{Binding .}" ItemTapped="OnTripSelected" BackgroundColor="{StaticResource Blue4}">
+               <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label 
+                                    FontSize="30"
+                                    Text="{Binding name}"
+                                    TextColor="{StaticResource Yellow4}"
+                                />
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button 
+                x:Name="CreateTripPageButton"
+                Clicked="OnCreateTripPageButtonClicked"
+                FontSize="25"
+                Text="Create Trip"
+                TextColor="{StaticResource Yellow3}"
+            ></Button>
+            <!--<Button x:Name="Profile" Text="Profile" TextColor="{StaticResource DefaultTextColor}"></Button>
+            <Button x:Name="MyTrips" Text="My Trips" TextColor="{StaticResource DefaultTextColor}"></Button>-->
         </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
