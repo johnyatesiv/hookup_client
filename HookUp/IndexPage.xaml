@@ -12,11 +12,27 @@
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <Label 
-                                    FontSize="30"
-                                    Text="{Binding name}"
-                                    TextColor="{StaticResource Yellow4}"
-                                />
+                                <StackLayout>
+                                    <Label 
+                                        FontSize="20"
+                                        Text="{Binding boat}"
+                                        TextColor="{StaticResource Yellow4}"
+                                        HorizontalOptions="Start"
+                                    ></Label>
+                                    <!--<Label 
+                                        FontSize="15"
+                                        Text="{Binding boat}"
+                                        TextColor="{StaticResource Yellow4}"
+                                        HorizontalOptions="Center"
+                                    ></Label>
+                                    <Label
+                                        FontSize="10"
+                                        Text="{Binding start}"
+                                        TextColor="{StaticResource Yellow4}"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="End"
+                                    ></Label>-->
+                                </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>

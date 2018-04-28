@@ -7,21 +7,26 @@
             Margin="5"
         >
             <Label Text="Create a Trip" FontSize="35" TextColor="{StaticResource Yellow3}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="Boat Name" FontSize="15" TextColor="{StaticResource Yellow3}"/>
-            <Entry x:Name="Location" TextColor="{StaticResource Yellow3}"/>
+            <Label Text="Boat Name" TextColor="{StaticResource Yellow3}" FontSize="15"/>
+            <Entry x:Name="Boat"/>
             <Label Text="Dock Location" FontSize="15" TextColor="{StaticResource Yellow3}"/>
-            <Entry x:Name="Boat" TextColor="{StaticResource Yellow3}"/>
+            <Entry x:Name="Location"/>
             <Label Text="Start Time" FontSize="15" TextColor="{StaticResource Yellow3}"/>
-            <DatePicker x:Name="Start" VerticalOptions="CenterAndExpand">
+            <DatePicker x:Name="Start" HorizontalOptions="CenterAndExpand">
                  <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
             </DatePicker>
             <Label Text="End Time" FontSize="15" TextColor="{StaticResource Yellow3}"/>
-            <DatePicker x:Name="End" VerticalOptions="CenterAndExpand">
+            <DatePicker x:Name="End" HorizontalOptions="CenterAndExpand">
                  <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
             </DatePicker>
             <Button x:Name="CreateTripButton"
                     TextColor="{StaticResource Yellow3}"
                     Clicked="OnCreateTripButtonClicked"
+                    WidthRequest="200"
+                    Text="Submit Trip"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="End"
+                    BackgroundColor="{StaticResource Blue2}"
             ></Button>
         </StackLayout>
     </ContentPage.Content>

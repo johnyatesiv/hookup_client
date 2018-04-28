@@ -12,8 +12,9 @@ namespace HookUp
 {
     public class API
     {
-        public static string appRoute = "http://localhost:3000";
+        public static string appRoute = "https://murmuring-bayou-59523.herokuapp.com";
         public static string authenticationRoute = appRoute + "/authenticate";
+        public static string registerRoute = appRoute + "/register";
         public static string tripRoute = appRoute + "/api/v1/trips";
         public static string peopleRoute = appRoute + "/api/v1/people";
         public static string requestFailedError = "{\"success\": false, message: \"Request failed.\"}";
@@ -56,18 +57,18 @@ namespace HookUp
             }
         }
 
-        public async Task<ServerPeopleResponse> getPeople(string route, string parameters)
+        public async Task<ServerUserResponse> getUsers(string route, string parameters)
         {
             var res = await _client.GetAsync(new Uri(route));
 
             if (res.IsSuccessStatusCode)
             {
                 var content = await res.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<ServerPeopleResponse>(content);
+                return JsonConvert.DeserializeObject<ServerUserResponse>(content);
             }
             else
             {
-                return new ServerPeopleResponse { error = true, message = "API call failed." };
+                return new ServerUserResponse { error = true, message = "API call failed." };
             }
         }
 
@@ -91,6 +92,24 @@ namespace HookUp
             }
         }
 
+        public async Task<ServerTripResponse> createTrip(object parameters)
+        {
+            var json = JsonConvert.SerializeObject(parameters);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var res = await _client.PostAsync(new Uri(tripRoute), content);
+
+            if (res.IsSuccessStatusCode)
+            {
+                var resContent = await res.Content.ReadAsStringAsync();
+                Debug.WriteLine(resContent);
+                return JsonConvert.DeserializeObject<ServerTripResponse>(resContent);
+            }
+            else
+            {
+                return new ServerTripResponse { error = true, message = "API call failed." };
+            }
+        }
+
         /* */
         //private async Task<ServerResponse> _PUT(string route, object parameters)
         //{
@@ -108,11 +127,41 @@ namespace HookUp
             public string password;
         }
 
-        public async Task<ServerResponse> Authenticate(string email, string password)
+        public async Task<AuthResponse> Authenticate(string email, string password)
         {
             AuthenticationObject authentication = new AuthenticationObject { email = email, password = password };
-            ServerResponse response = await POST(authenticationRoute, authentication);
-            return response;
+            var json = JsonConvert.SerializeObject(authentication);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var res = await _client.PostAsync(new Uri(authenticationRoute), content);
+
+            if (res.IsSuccessStatusCode)
+            {
+                var resContent = await res.Content.ReadAsStringAsync();
+                Debug.WriteLine(resContent);
+                return JsonConvert.DeserializeObject<AuthResponse>(resContent);
+            }
+            else
+            {
+                return new AuthResponse { error = true, message = "API call failed." };
+            }
+        }
+
+        public async Task<AuthResponse> Register(User user)
+        {
+            var json = JsonConvert.SerializeObject(user);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var res = await _client.PostAsync(new Uri(registerRoute), content);
+
+            if (res.IsSuccessStatusCode)
+            {
+                var resContent = await res.Content.ReadAsStringAsync();
+                Debug.WriteLine(resContent);
+                return JsonConvert.DeserializeObject<AuthResponse>(resContent);
+            }
+            else
+            {
+                return new AuthResponse { error = true, message = "Register failed." };
+            }
         }
     }
 }

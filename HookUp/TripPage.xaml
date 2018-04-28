@@ -35,6 +35,13 @@
                 HorizontalOptions="Center"
                 FontSize="20"
             ></Label>
+            <Button
+                x:Name="JoinTripButton"
+                FontSize="30"
+                TextColor="{StaticResource Yellow3}"
+            >
+                
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

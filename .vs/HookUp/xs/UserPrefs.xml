@@ -1,16 +1,8 @@
 ﻿<Properties StartupConfiguration="{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="HookUp/IndexPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HookUp/IndexPage.xaml">
     <Files>
-      <File FileName="HookUp/LoginPage.xaml" Line="24" Column="11" />
-      <File FileName="HookUp/IndexPage.xaml" Line="25" Column="21" />
-      <File FileName="HookUp/IndexPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="HookUp/LoginPage.xaml.cs" Line="28" Column="17" />
-      <File FileName="HookUp/TripPage.xaml.cs" Line="18" Column="41" />
-      <File FileName="HookUp/TripPage.xaml" Line="41" Column="1" />
-      <File FileName="HookUp/API.cs" Line="50" Column="17" />
-      <File FileName="HookUp/CreateTripPage.xaml" Line="29" Column="1" />
-      <File FileName="HookUp/CreateTripPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="HookUp/LoginPage.xaml" Line="30" Column="17" />
+      <File FileName="HookUp/IndexPage.xaml" Line="21" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

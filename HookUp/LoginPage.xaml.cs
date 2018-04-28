@@ -16,21 +16,25 @@ namespace HookUp
 
         public async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            ServerResponse response = await api.Authenticate(LoginEmailField.Text, LoginPasswordField.Text);
+            LoginButton.IsEnabled = false;
+            AuthResponse response = await api.Authenticate(LoginEmailField.Text, LoginPasswordField.Text);
 
             if(response.error)
             {
-                LoginErrorLabel.Text = "There was an error logging in!";  
+                await DisplayAlert("Error", "There was an error logging in!", "OK");
+                LoginButton.IsEnabled = true;
             }
             else
             {
+                LoginButton.IsEnabled = true;
                 LoginErrorLabel.Text = "";
                 await Navigation.PushAsync(new IndexPage());
             }
         }
 
-        //private bool Login()
-        //{
-        //}
+        public async void OnRegisterPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegisterPage());
+        }
     }
 }

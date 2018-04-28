@@ -3,10 +3,10 @@ using Xamarin.Forms;
 
 namespace HookUp
 {
-    public partial class ServerResponse
+    public class AuthData
     {
-        public bool error;
-        public string message;
+        public AuthData() { }
+        public string token { get; set; }
     }
 
     public class Trip
@@ -25,18 +25,31 @@ namespace HookUp
         public string end { get; set; }
     }
 
-    public class Person
+    public class User
     {
-        public Person()
+        public User()
         {
             
         }
 
-        public string name { get; set; }
-        public int age { get; set; }
-        public int drink { get; set; }
-        public int smoke { get; set; }
-        public int noise { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        //public int age { get; set; }
+        public bool drink { get; set; }
+        public bool smoke { get; set; }
+        public bool weed { get; set; }
+        public bool noise { get; set; }
+    }
+
+    public partial class ServerResponse
+    {
+        public bool error;
+        public string message;
+    }
+
+    public partial class AuthResponse : ServerResponse
+    {
+        public AuthData payload;
     }
 
     public class ServerTripResponse : ServerResponse
@@ -44,9 +57,9 @@ namespace HookUp
         public List<Trip> payload;
     }
 
-    public partial class ServerPeopleResponse : ServerResponse
+    public partial class ServerUserResponse : ServerResponse
     {
-        public List<Person> payload;
+        public List<User> payload;
     }
 
     public partial class App : Application
