@@ -1,6 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HookUp.App">
 	<Application.Resources>
-		<!-- Application resource dictionary -->
+		<ResourceDictionary>
+            <Color x:Key="BlueMain">#4E6D92</Color>
+            <Color x:Key="Blue1">#19395F</Color>
+            <Color x:Key="Blue2">#305078</Color>
+            <Color x:Key="Blue3">#768FAE</Color>
+            <Color x:Key="Blue4">#ABBDD2</Color>
+            <Color x:Key="PurpleMain">#5E579B</Color>
+            <Color x:Key="Purple1">#B5B1D7</Color>
+            <Color x:Key="Purple2">#857FB7</Color>
+            <Color x:Key="Purple3">#3F377F</Color>
+            <Color x:Key="Purple4">#261F65</Color>
+            <Color x:Key="YellowMain">#DFC76E</Color>
+            <Color x:Key="Yellow1">#91781C</Color>
+            <Color x:Key="Yellow2">#B79D3F</Color>
+            <Color x:Key="Yellow3">#FFEBA5</Color>
+            <Color x:Key="Yellow4">#FFF4CB</Color>
+            <Color x:Key="BrownMain">#DFB36E</Color>
+            <Color x:Key="Brown1">#91641C</Color>
+            <Color x:Key="Brown2">#B7883F</Color>
+            <Color x:Key="Brown3">#FFDCA5</Color>
+            <Color x:Key="Brown4">#FFEBCB</Color>
+            <!--<Style x:Key="LabelPageHeadingStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}" />
+            </Style>-->
+        </ResourceDictionary>
 	</Application.Resources>
 </Application>

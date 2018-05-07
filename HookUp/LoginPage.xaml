@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HookUp"
+    x:Class="HookUp.LoginPage"
+>
+    <StackLayout BackgroundColor="{StaticResource BlueMain}" Padding="5,5,5,5" Margin="2">
+        <Label FontSize="80" Text="HookUp" TextColor="{StaticResource Yellow3}" HorizontalOptions="CenterAndExpand"/>
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Fish_icon.svg/2000px-Fish_icon.svg.png"/>
+        <Label Text="Email" TextColor="{StaticResource Yellow3}" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="LoginEmailField" Placeholder="Email" />
+        <Label Text="Password" TextColor="{StaticResource Yellow3}" FontSize="30" HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="LoginPasswordField" IsPassword="true" Placeholder="Password"/>
+        <StackLayout Orientation="Horizontal">
+            <Button 
+                x:Name="LoginButton"
+                Text="Login"
+                FontSize="30"
+                TextColor="{StaticResource Yellow3}"
+                Clicked="OnLoginButtonClicked" 
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="{StaticResource Blue2}"
+                WidthRequest="150"
+            />
+            <Button 
+                x:Name="RegisterPageButton"
+                Text="Sign Up"
+                FontSize="30"
+                TextColor="{StaticResource Yellow3}"
+                Clicked="OnRegisterPageButtonClicked" 
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="{StaticResource Blue2}"
+                WidthRequest="150"
+            />
+        </StackLayout>
+        <Label x:Name="LoginErrorLabel" TextColor="{StaticResource Yellow3}"/>
+    </StackLayout>
+</ContentPage>

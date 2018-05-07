@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HookUp.IndexPage">
+	<ContentPage.Content>
+        <StackLayout 
+            BackgroundColor="{StaticResource BlueMain}"
+            Padding="10,10,10,10"
+            Margin="5"
+        >
+            <Label x:Name="WeatherForecastView"></Label>
+            <ListView x:Name="TripListView" ItemsSource="{Binding .}" ItemTapped="OnTripSelected" BackgroundColor="{StaticResource Blue4}">
+               <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Label 
+                                        FontSize="20"
+                                        Text="{Binding boat}"
+                                        TextColor="{StaticResource Yellow4}"
+                                        HorizontalOptions="Start"
+                                    ></Label>
+                                    <!--<Label 
+                                        FontSize="15"
+                                        Text="{Binding boat}"
+                                        TextColor="{StaticResource Yellow4}"
+                                        HorizontalOptions="Center"
+                                    ></Label>
+                                    <Label
+                                        FontSize="10"
+                                        Text="{Binding start}"
+                                        TextColor="{StaticResource Yellow4}"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="End"
+                                    ></Label>-->
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button 
+                x:Name="CreateTripPageButton"
+                Clicked="OnCreateTripPageButtonClicked"
+                FontSize="25"
+                Text="Create Trip"
+                TextColor="{StaticResource Yellow3}"
+            ></Button>
+            <!--<Button x:Name="Profile" Text="Profile" TextColor="{StaticResource DefaultTextColor}"></Button>
+            <Button x:Name="MyTrips" Text="My Trips" TextColor="{StaticResource DefaultTextColor}"></Button>-->
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

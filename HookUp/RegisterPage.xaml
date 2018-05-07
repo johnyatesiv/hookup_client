@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HookUp"
+    x:Class="HookUp.RegisterPage"
+>
+    <StackLayout BackgroundColor="{StaticResource BlueMain}" Padding="5,5,5,5" Margin="2">
+        <Label FontSize="80" Text="HookUp" TextColor="{StaticResource Yellow3}" HorizontalOptions="CenterAndExpand"/>
+        <Image Source="https://images.vexels.com/media/users/3/137603/isolated/preview/21d4743febfa859110d917d6788b4e49-fishing-fisherman-on-boat-by-vexels.png"/>
+        <Label Text="Email" TextColor="{StaticResource Yellow3}" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+        <Entry x:Name="RegisterEmailField" Placeholder="Email" />
+        <Label Text="Password" TextColor="{StaticResource Yellow3}" FontSize="30" HorizontalOptions="CenterAndExpand" />
+        <Entry x:Name="RegisterPasswordField" IsPassword="true" Placeholder="Password"/>
+        <Button 
+                x:Name="RegisterButton"
+                Text="Register"
+                FontSize="30"
+                TextColor="{StaticResource Yellow3}"
+                Clicked="OnRegisterButtonClicked" 
+                HorizontalOptions="CenterAndExpand" 
+                BackgroundColor="{StaticResource Blue2}"
+                WidthRequest="200"
+        />
+        <Label x:Name="RegisterErrorLabel"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HookUp.iOS", "HookUp.iOS.csproj", "{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Release|iPhone.ActiveCfg = Release|iPhone
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Release|iPhone.Build.0 = Release|iPhone
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{EA097E2B-BA81-42BD-8517-8ADC8FB8C351}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
