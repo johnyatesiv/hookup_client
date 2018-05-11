@@ -18,6 +18,7 @@ namespace HookUp
 
         public async void OnCreateTripButtonClicked(object sender, EventArgs e)
         {
+            var create = await DisplayAlert("Confirm", "Create this trip?", "Yes", "No");
             Trip newTrip = new Trip
             {
                 boat = Boat.Text,
@@ -26,7 +27,7 @@ namespace HookUp
                 end = End.Date.ToString()
             };
 
-            ServerTripResponse response = (ServerTripResponse) await api.createTrip(newTrip);
+            ServerResponse response = (ServerResponse) await api.createTrip(newTrip);
 
             if (response.error)
             {
@@ -38,6 +39,8 @@ namespace HookUp
                 Location.Text = "";
                 Start.Date = DateTime.Now;
                 End.Date = DateTime.Now;
+
+                await Navigation.PopAsync();
             }
         }
 

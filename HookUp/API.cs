@@ -92,7 +92,7 @@ namespace HookUp
             }
         }
 
-        public async Task<ServerTripResponse> createTrip(object parameters)
+        public async Task<ServerResponse> createTrip(object parameters)
         {
             var json = JsonConvert.SerializeObject(parameters);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -102,11 +102,11 @@ namespace HookUp
             {
                 var resContent = await res.Content.ReadAsStringAsync();
                 Debug.WriteLine(resContent);
-                return JsonConvert.DeserializeObject<ServerTripResponse>(resContent);
+                return JsonConvert.DeserializeObject<ServerResponse>(resContent);
             }
             else
             {
-                return new ServerTripResponse { error = true, message = "API call failed." };
+                return new ServerResponse { error = true, message = "API call failed." };
             }
         }
 
