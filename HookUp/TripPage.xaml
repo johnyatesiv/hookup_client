@@ -30,7 +30,7 @@
                 x:Name="TripStart"
                 TextColor="{StaticResource Yellow3}"
                 HorizontalOptions="Center"
-                FontSize="22"
+                FontSize="20"
             ></Label>
             <Label
                 Text="and returning at"
@@ -42,7 +42,7 @@
                 x:Name="TripEnd"
                 TextColor="{StaticResource Yellow3}"
                 HorizontalOptions="Center"
-                FontSize="22"
+                FontSize="20"
             ></Label>
             <Button
                 Text="Join Trip"
