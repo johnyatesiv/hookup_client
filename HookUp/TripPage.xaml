@@ -22,7 +22,10 @@
                 HorizontalOptions="Center"
                 FontSize="25"
             ></Label>
-            <Image Source="http://www.bookpunks.com/wp-content/uploads/2015/08/Sailing-If-I-Had-a-Boat.jpg"/>
+            <Image 
+                Source="http://www.bookpunks.com/wp-content/uploads/2015/08/Sailing-If-I-Had-a-Boat.jpg"
+                Aspect="AspectFit"
+            />
             <Label 
                 x:Name="TripStart"
                 TextColor="{StaticResource Yellow3}"

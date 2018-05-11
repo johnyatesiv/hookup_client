@@ -17,7 +17,7 @@ namespace HookUp
         {
             //TripName.Text = trip.name;
             TripBoat.Text = trip.boat;
-            TripLocation.Text = trip.location;
+            TripLocation.Text = "Departing from "+trip.location+" at";
             TripStart.Text = trip.start;
             TripEnd.Text = trip.end;
 
