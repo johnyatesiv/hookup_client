@@ -13,8 +13,7 @@ namespace HookUp
         public IndexPage()
         {
             InitializeComponent();
-            GetTrips();
-            //TODO add trips dynamically to TripGrid
+            //GetTrips();
             //TODO pull weather/tide updates 
         }
 
@@ -64,6 +63,13 @@ namespace HookUp
         public void GetWeatherUpdate()
         {
             
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            tripList = new ObservableCollection<Trip>();
+            GetTrips();
         }
     }
 }
