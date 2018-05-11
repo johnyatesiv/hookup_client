@@ -20,7 +20,11 @@ namespace HookUp
             TripLocation.Text = "Departing from "+trip.location+" at";
             TripStart.Text = trip.start;
             TripEnd.Text = trip.end;
+        }
 
+        public async void OnJoinTripPageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

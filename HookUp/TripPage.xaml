@@ -30,7 +30,7 @@
                 x:Name="TripStart"
                 TextColor="{StaticResource Yellow3}"
                 HorizontalOptions="Center"
-                FontSize="30"
+                FontSize="22"
             ></Label>
             <Label
                 Text="and returning at"
@@ -42,14 +42,15 @@
                 x:Name="TripEnd"
                 TextColor="{StaticResource Yellow3}"
                 HorizontalOptions="Center"
-                FontSize="30"
+                FontSize="22"
             ></Label>
             <Button
+                Text="Join Trip"
                 x:Name="JoinTripButton"
+                Clicked="OnJoinTripPageButtonClicked"
                 FontSize="30"
                 TextColor="{StaticResource Yellow3}"
             >
-                
             </Button>
         </StackLayout>
     </ContentPage.Content>
