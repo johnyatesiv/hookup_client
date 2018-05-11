@@ -49,7 +49,9 @@
                 x:Name="JoinTripButton"
                 Clicked="OnJoinTripPageButtonClicked"
                 FontSize="30"
+                BackgroundColor="{StaticResource Blue2}"
                 TextColor="{StaticResource Yellow3}"
+                VerticalOptions="End"
             >
             </Button>
         </StackLayout>
